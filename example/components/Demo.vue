@@ -10,17 +10,33 @@
       </svg>
     </div>
     <div v-show="show" class="source">
-      <span class="btn-clipboard" data-original-title="Copy to clipboard">Copy</span>
+      <span class="btn-clipboard" data-original-title="Copy to clipboard" ref="copy">Copy</span>
       <slot name="source"></slot>
     </div>
   </div>
 </template>
 <script>
+import Clipboard from 'clipboard'
 export default {
   name: 'demo',
   data () {
     return {
-      show: false
+      show: false,
+      clipboardInstance: null
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.clipboardInstance = new Clipboard(this.$refs.copy, {
+        text: target => {
+          return target.nextElementSibling.innerText
+        }
+      })
+    })
+  },
+  beforeDestroy () {
+    if (this.clipboardInstance) {
+      this.clipboardInstance.destroy()
     }
   }
 }

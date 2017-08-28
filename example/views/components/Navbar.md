@@ -1,4 +1,4 @@
-### Navbar
+# Navbar
 
 ```html
 <bs-navbar>

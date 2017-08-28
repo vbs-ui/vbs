@@ -29,4 +29,5 @@ export default {
 <style lang="scss">
 @import "../assets/variables";
 @import "../assets/nav";
+@import "nav";
 </style>
