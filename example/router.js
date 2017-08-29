@@ -44,7 +44,7 @@ components.forEach(component => {
 })
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   linkActiveClass: 'active',
   routes
 })
