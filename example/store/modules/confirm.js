@@ -1,4 +1,4 @@
-import { merge } from 'vtc'
+import { merge } from 'src/utils'
 
 const state = {
   show: false,

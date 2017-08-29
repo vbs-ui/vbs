@@ -15,7 +15,7 @@
   </nav>
 </template>
 <script>
-import commonMixins from '../mixins/common'
+import commonMixins from 'src/mixins/common'
 export default {
   name: 'bs-navbar',
   mixins: [commonMixins],

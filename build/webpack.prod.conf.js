@@ -18,7 +18,9 @@ var env = process.env.NODE_ENV === 'testing'
 
 var webpackConfig = merge(baseWebpackConfig, {
   externals: {
-    'vue': 'Vue'
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+    'vuex': 'Vuex'
   },
   module: {
     rules: utils.styleLoaders({
@@ -37,7 +39,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
-    new webpack.optimize.ModuleConcatenationPlugin(),
+    // new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false

@@ -2,7 +2,7 @@
   <span class="badge" :class="[`badge-${type}`, pill ? 'badge-pill' : '']"><slot></slot></span>
 </template>
 <script>
-import commonMixins from '../mixins/common'
+import commonMixins from 'src/mixins/common'
 export default {
   name: 'bs-badge',
   mixins: [commonMixins],

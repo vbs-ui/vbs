@@ -7,7 +7,7 @@
 </template>
 <script>
 import clickoutside from 'directives/clickoutside'
-import commonMixins from '../mixins/common'
+import commonMixins from 'src/mixins/common'
 export default {
   name: 'bs-button',
   mixins: [commonMixins],

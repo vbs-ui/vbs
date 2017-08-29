@@ -1,0 +1,33 @@
+language: node_js
+
+node_js:
+  - "6"
+
+branches:
+  only:
+    - master
+    - develop
+
+before_install:
+  - npm i -g yarn
+  - git config --global push.default matching
+  - git config --global user.name "erguotou"
+  - git config --global user.email "erguotou525@gmail.com"
+
+install:
+  - yarn
+
+script:
+  - npm run build:doc
+
+after_success:
+  - cd dist
+  - git init
+  - git add -A
+  - git commit -m "Auto build"
+  - git push -u https://$GH_TOKEN@github.com/vbs-ui/vbs.git HEAD:gh=pages --force
+
+cache:
+  yarn: true
+  directories:
+    - node_modules

@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import commonMixins from '../mixins/common'
+import commonMixins from 'src/mixins/common'
 export default {
   name: 'bs-alert',
   mixins: [commonMixins],

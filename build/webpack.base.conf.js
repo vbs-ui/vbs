@@ -26,9 +26,9 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       '@': resolve('example'),
+      'src': resolve('src'),
       'components': resolve('components'),
-      'directives': resolve('directives'),
-      'shared': resolve('shared')
+      'directives': resolve('directives')
     }
   },
   module: {
@@ -37,7 +37,7 @@ module.exports = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('example'), resolve('test')],
+        include: [resolve('example'), resolve('components'), resolve('directives'),resolve('test')],
         options: {
           formatter: require('eslint-friendly-formatter')
         }
@@ -50,7 +50,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('example'), resolve('test')]
+        include: [resolve('example'), resolve('components'), resolve('directives'), resolve('node_modules/vtc'), resolve('test')]
       },
       {
         test: /\.md$/,
