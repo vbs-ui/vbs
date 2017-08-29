@@ -12,7 +12,8 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src components directives example test/unit/specs"
   },
-  "peerDependencies": {
+  "dependencies": {
+    "clipboard": "^1.7.1",
     "vue": "^2.4.2"
   },
   "devDependencies": {
@@ -95,8 +96,5 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ],
-  "dependencies": {
-    "clipboard": "^1.7.1"
-  }
+  ]
 }
