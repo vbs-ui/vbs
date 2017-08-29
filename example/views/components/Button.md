@@ -2,7 +2,9 @@
 export default {
   data () {
     return {
-      active: false
+      active: false,
+      selected1: ['1'],
+      selected2: '1'
     }
   }
 }
@@ -72,13 +74,6 @@ Bootstrap includes several predefined button styles, each serving its own semant
 ::: demo Toggle states
 ```html
 <bs-button type="primary" size="lg" :active.sync="active" togglable>Primary</bs-button>
-<script>
-export default {
-  data () {
-    return { active: false }
-  }
-}
-</script>
 ```
 :::
 
@@ -94,15 +89,5 @@ export default {
   <bs-button-item v-model="selected2" value="2">Checkbox 2</bs-button-item>
   <bs-button-item v-model="selected2" value="3">Checkbox 3</bs-button-item>
 </bs-button-group>
-<script>
-export default {
-  data () {
-    return {
-      selected1: ['1'],
-      selected2: '1'
-    }
-  }
-}
-</script>
 ```
 :::
