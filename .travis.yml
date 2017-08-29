@@ -25,7 +25,7 @@ after_success:
   - git init
   - git add -A
   - git commit -m "Auto build"
-  - git push -u https://$GH_TOKEN@github.com/vbs-ui/vbs.git HEAD:gh=pages --force
+  - git push -u https://$GH_TOKEN@github.com/vbs-ui/vbs.git HEAD:gh-pages --force
 
 cache:
   yarn: true
