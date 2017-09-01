@@ -7,10 +7,10 @@
       <slot></slot>
     </div>
     <template v-if="showControl">
-      <a class="carousel-control-prev" :class="{disabled:active<=0}" role="button" @click.prevent="toPrev">
+      <a class="carousel-control-prev" :class="{disabled:active<=0}" role="button" @click="toPrev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       </a>
-      <a class="carousel-control-next" :class="{disabled:active>=children.length}" role="button" @click.prevent="toNext">
+      <a class="carousel-control-next" :class="{disabled:active>=children.length}" role="button" @click="toNext">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
       </a>
     </template>
@@ -45,40 +45,60 @@ export default {
   data () {
     return {
       active: this.defaultActive,
-      children: []
+      children: [],
+      timeout: null
     }
   },
   watch: {
     active (v) {
-      this.updateActive()
       this.$emit('change', v)
     }
   },
   methods: {
     addItem (item) {
       this.children.push(item)
+      item.init(this.children.length === this.defaultActive + 1)
     },
     removeItem (item) {
       this.children.splice(this.children.indexOf(item), 1)
     },
-    updateActive () {
+    updateActive (direction) {
       this.children.forEach((child, index) => {
-        child.setActive(index === this.active)
+        child.setActive(index === this.active, direction)
       })
     },
     toPrev () {
-      if (this.active > 1) {
+      if (this.active > 0) {
+        this.stopInterval()
         this.active--
+        this.updateActive('prev')
+        this.startInterval()
       }
     },
     toNext () {
-      if (this.active > this.children.length - 1) {
+      if (this.active > this.children.length - 2) {
+        this.stopInterval()
         this.active++
+        this.updateActive('next')
+        this.startInterval()
+      }
+    },
+    startInterval () {
+      this.timeout = setInterval(() => {
+        this.active = (this.active + 1) % this.children.length
+        this.updateActive('next')
+      }, this.interval)
+    },
+    stopInterval () {
+      if (this.timeout) {
+        clearInterval(this.timeout)
+        this.timeout = null
       }
     }
   },
   mounted () {
-    this.updateActive()
+    // this.updateActive()
+    this.startInterval()
   }
 }
 </script>

@@ -15,6 +15,7 @@ A slideshow component for cycling through elements—images or slides of text—
   </bs-carousel-item>
 </bs-carousel>
 ```
+:::
 
 ::: demo With controls
 ```html
@@ -34,7 +35,7 @@ A slideshow component for cycling through elements—images or slides of text—
 
 ::: demo With indicators
 ```html
-<bs-carousel show-indicators show-control>
+<bs-carousel :default-active="1" show-indicators show-control>
   <bs-carousel-item>
     <img class="w-100" src="../../assets/images/slide1.svg" alt="First slide">
   </bs-carousel-item>
