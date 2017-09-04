@@ -5,5 +5,7 @@ export default [
   { name: 'Button', link: 'button' },
   { name: 'Card', link: 'card' },
   { name: 'Carousel', link: 'carousel' },
-  { name: 'Navbar', link: 'navbar' }
+  { name: 'Navbar', link: 'navbar' },
+  { name: 'Pagination', link: 'pagination' },
+  { name: 'Progress', link: 'progress' }
 ]

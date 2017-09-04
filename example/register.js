@@ -13,6 +13,8 @@ import Carousel from 'components/carousel/Carousel'
 import CarouselItem from 'components/carousel/CarouselItem'
 import Navbar from 'components/navbar/Navbar'
 import NavbarItem from 'components/navbar/NavbarItem'
+import Pagination from 'components/pagination/Pagination'
+import Progress from 'components/progress/Progress'
 Vue.component(Alert.name, Alert)
 Vue.component(Badge.name, Badge)
 Vue.component(Breadcrumb.name, Breadcrumb)
@@ -25,6 +27,8 @@ Vue.component(CarouselItem.name, CarouselItem)
 Vue.component(ButtonGroupItem.name, ButtonGroupItem)
 Vue.component(Navbar.name, Navbar)
 Vue.component(NavbarItem.name, NavbarItem)
+Vue.component(Pagination.name, Pagination)
+Vue.component(Progress.name, Progress)
 
 // demo components
 import Demo from '@/components/Demo'
