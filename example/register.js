@@ -11,6 +11,8 @@ import ButtonGroupItem from 'components/button/ButtonGroupItem'
 import Card from 'components/card/Card'
 import Carousel from 'components/carousel/Carousel'
 import CarouselItem from 'components/carousel/CarouselItem'
+import ListGroup from 'components/list-group/ListGroup'
+import ListGroupItem from 'components/list-group/ListGroupItem'
 import Navbar from 'components/navbar/Navbar'
 import NavbarItem from 'components/navbar/NavbarItem'
 import Pagination from 'components/pagination/Pagination'
@@ -25,6 +27,8 @@ Vue.component(Card.name, Card)
 Vue.component(Carousel.name, Carousel)
 Vue.component(CarouselItem.name, CarouselItem)
 Vue.component(ButtonGroupItem.name, ButtonGroupItem)
+Vue.component(ListGroup.name, ListGroup)
+Vue.component(ListGroupItem.name, ListGroupItem)
 Vue.component(Navbar.name, Navbar)
 Vue.component(NavbarItem.name, NavbarItem)
 Vue.component(Pagination.name, Pagination)
