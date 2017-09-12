@@ -46,9 +46,6 @@ export default {
   margin-bottom: 15px;
   border: 1px solid #e9e9e9;
   border-radius: 4px;
-  p {
-    margin-bottom: 0;
-  }
   code {
     font-size: 14px;
   }
@@ -59,6 +56,9 @@ export default {
   .description {
     position: relative;
     padding: 18px 30px 18px 15px;
+    p {
+      margin-bottom: 0;
+    }
     .icon-toggle-code {
       position: absolute;
       right: 12px;

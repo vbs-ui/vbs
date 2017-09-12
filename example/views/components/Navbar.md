@@ -1,5 +1,6 @@
 # Navbar
 
+::: demo Basic example
 ```html
 <bs-navbar>
   <template slot="brand">Bootstrap</template>
@@ -8,3 +9,4 @@
   <bs-navbar-item disabled>Disabled</bs-navbar-item>
 </bs-navbar>
 ```
+:::
