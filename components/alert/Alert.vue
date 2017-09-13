@@ -1,11 +1,3 @@
-<template>
-  <div v-if="!closed" class="alert" role="alert" :class="clz">
-    <button v-if="closable" @click="closed=true" type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <slot></slot>
-  </div>
-</template>
 <script>
 import commonMixins from 'src/mixins/common'
 export default {
@@ -23,16 +15,55 @@ export default {
       closed: false
     }
   },
-  computed: {
-    clz () {
-      const list = [`alert-${this.type}`]
-      if (this.closable) {
-        list.push('alert-dismissible')
-        if (this.animate) {
-          list.push('fade show')
-        }
+  methods: {
+    // render alert body
+    generateRender (h) {
+      // if closed, then render nothing
+      if (this.closed) {
+        return null
       }
-      return list
+      const subComp = [this.$slots.default]
+      if (this.closable) {
+        subComp.unshift(h('button', {
+          attrs: {
+            type: 'button',
+            'aria-label': 'Close'
+          },
+          'class': 'close',
+          on: {
+            click: () => {
+              this.closed = true
+              this.$emit('close')
+            }
+          }
+        }, [
+          h('span', {
+            attrs: {
+              'aria-hidden': 'true'
+            }
+          }, ['\xD7'])]
+        ))
+      }
+      return h('div', {
+        staticClass: 'alert',
+        'class': [`alert-${this.type}`, { 'alert-dismissible': this.closable }],
+        attrs: {
+          role: 'alert'
+        }
+      }, subComp)
+    }
+  },
+  render (h) {
+    if (this.animate) {
+      // wrap with transition component
+      return h('transition', {
+        props: {
+          leaveClass: 'show fade',
+          leaveToClass: 'fade'
+        }
+      }, [this.generateRender(h)])
+    } else {
+      return this.generateRender(h)
     }
   }
 }
