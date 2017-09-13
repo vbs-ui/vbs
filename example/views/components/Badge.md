@@ -46,3 +46,16 @@ Documentation and examples for badges, our small count and labeling component.
 <bs-badge pill type="dark">Dark</bs-badge>
 ```
 :::
+
+::: demo Links
+```html
+<bs-badge actionable>Primary</bs-badge>
+<bs-badge actionable type="secondary">Secondary</bs-badge>
+<bs-badge actionable type="success">Success</bs-badge>
+<bs-badge actionable type="danger">Danger</bs-badge>
+<bs-badge actionable type="warning">Warning</bs-badge>
+<bs-badge actionable type="info">Info</bs-badge>
+<bs-badge actionable type="light">Light</bs-badge>
+<bs-badge actionable type="dark">Dark</bs-badge>
+```
+:::
