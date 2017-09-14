@@ -1,10 +1,3 @@
-<template>
-  <li class="breadcrumb-item" :class="{active}">
-    <a v-if="href" :href="href"><slot></slot></a>
-    <router-link v-else-if="route" :to="route"><slot></slot></router-link>
-    <slot v-else></slot>
-  </li>
-</template>
 <script>
 export default {
   name: 'bs-breadcrumb-item',
@@ -12,6 +5,27 @@ export default {
     route: [String, Object],
     href: String,
     active: Boolean
+  },
+  render (h) {
+    const attrs = {}
+    if (this.active) {
+      attrs['aria-current'] = 'page'
+    }
+    const subComp = []
+    if (!this.route && !this.href) {
+      subComp.push(this.$slots.default)
+    } else if (this.route) {
+      subComp.push(h('router-link', { props: { to: this.route }}, [this.$slots.default]))
+    } else {
+      subComp.push(h('a', { attrs: { href: this.href }}, [this.$slots.default]))
+    }
+    return h('li', {
+      staticClass: 'breadcrumb-item',
+      'class': {
+        active: this.active
+      },
+      attrs
+    }, subComp)
   }
 }
 </script>

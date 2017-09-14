@@ -5,7 +5,7 @@
       <input type="checkbox" :value="value" autocomplete="off" @change="onChange1"> <slot></slot>
     </template>
     <template v-else>
-      <input type="radio" :value="value" autocomplete="off" @change="onChange2"> <slot></slot>
+      <input type="radio" :value="value" :name="name" autocomplete="off" @change="onChange2"> <slot></slot>
     </template>
   </label>
 </template>
@@ -24,7 +24,12 @@ export default {
     checked: {
       required: true
     },
-    disabled: Boolean
+    disabled: Boolean,
+    // recomment to provide
+    name: {
+      type: String,
+      default: 'options'
+    }
   },
   data () {
     return {

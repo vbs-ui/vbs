@@ -11,6 +11,9 @@ import ButtonGroupItem from 'components/button/ButtonGroupItem'
 import Card from 'components/card/Card'
 import Carousel from 'components/carousel/Carousel'
 import CarouselItem from 'components/carousel/CarouselItem'
+import Dropdown from 'components/dropdown/Dropdown'
+import DropdownItem from 'components/dropdown/DropdownItem'
+import DropdownDivider from 'components/dropdown/divider'
 import ListGroup from 'components/list-group/ListGroup'
 import ListGroupItem from 'components/list-group/ListGroupItem'
 import Navbar from 'components/navbar/Navbar'
@@ -23,10 +26,13 @@ Vue.component(Breadcrumb.name, Breadcrumb)
 Vue.component(BreadcrumbItem.name, BreadcrumbItem)
 Vue.component(Button.name, Button)
 Vue.component(ButtonGroup.name, ButtonGroup)
+Vue.component(ButtonGroupItem.name, ButtonGroupItem)
 Vue.component(Card.name, Card)
 Vue.component(Carousel.name, Carousel)
 Vue.component(CarouselItem.name, CarouselItem)
-Vue.component(ButtonGroupItem.name, ButtonGroupItem)
+Vue.component(Dropdown.name, Dropdown)
+Vue.component(DropdownItem.name, DropdownItem)
+Vue.component(DropdownDivider.name, DropdownDivider)
 Vue.component(ListGroup.name, ListGroup)
 Vue.component(ListGroupItem.name, ListGroupItem)
 Vue.component(Navbar.name, Navbar)
