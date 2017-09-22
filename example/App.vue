@@ -64,6 +64,7 @@ export default {
 @import "close";
 @import "transitions";
 @import "jumbotron";
+@import "assets/content";
 @import "assets/atom-one-light.css";
 body {
   margin: 0;

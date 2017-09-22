@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-group" data-toggle="buttons">
+  <div class="btn-group" role="group" :aria-label="ariaLabel">
     <slot></slot>
   </div>
 </template>
@@ -11,7 +11,8 @@ export default {
     type: {
       type: String,
       default: 'primary'
-    }
+    },
+    ariaLabel: String
   }
 }
 </script>
