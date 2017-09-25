@@ -1,4 +1,4 @@
-# Dropdown
+# Dropdowns
 Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
 
 ::: demo Single button dropdowns

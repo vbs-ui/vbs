@@ -43,7 +43,6 @@ export default {
 </script>
 <style lang="scss">
 @import "../assets/_variables";
-@import "../assets/_component-example";
 .demo-block {
   margin-bottom: 15px;
   border: 1px solid #e9e9e9;
