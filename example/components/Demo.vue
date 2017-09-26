@@ -43,6 +43,7 @@ export default {
 </script>
 <style lang="scss">
 @import "../assets/_variables";
+// @import "../assets/component-example";
 .demo-block {
   margin-bottom: 15px;
   border: 1px solid #e9e9e9;
@@ -106,6 +107,11 @@ export default {
     & + .btn {
       margin-top: 1rem;
     }
+  }
+
+  .nav-tabs,
+  .nav-pills {
+    margin-bottom: 1rem;
   }
 }
 </style>

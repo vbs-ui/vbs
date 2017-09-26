@@ -45,3 +45,12 @@ Provide contextual feedback messages for typical user actions with the handful o
 </bs-alert>
 ```
 :::
+
+::: doc props
+| Key      | Type    | Required | Default   | Description                   | Remark |
+|----------|---------|----------|-----------|-------------------------------|--------|
+| type     | String  | false    | `primary` | Avaliable value: common types |        |
+| disabled | Boolean | false    | false     |                               |        |
+| closable | Boolean | false    | false     |                               |        |
+| animate  | Boolean | false    | true      |                               |        |
+:::

@@ -18,6 +18,8 @@ import ListGroup from 'components/list-group/ListGroup'
 import ListGroupItem from 'components/list-group/ListGroupItem'
 import Nav from 'components/navs/Nav'
 import NavItem from 'components/navs/NavItem'
+import NavContent from 'components/navs/NavContent'
+import NavPane from 'components/navs/NavPane'
 import Navbar from 'components/navbar/Navbar'
 import NavbarItem from 'components/navbar/NavbarItem'
 import Pagination from 'components/pagination/Pagination'
@@ -39,6 +41,8 @@ Vue.component(ListGroup.name, ListGroup)
 Vue.component(ListGroupItem.name, ListGroupItem)
 Vue.component(Nav.name, Nav)
 Vue.component(NavItem.name, NavItem)
+Vue.component(NavContent.name, NavContent)
+Vue.component(NavPane.name, NavPane)
 Vue.component(Navbar.name, Navbar)
 Vue.component(NavbarItem.name, NavbarItem)
 Vue.component(Pagination.name, Pagination)
@@ -47,6 +51,9 @@ Vue.component(Progress.name, Progress)
 // demo components
 import Demo from '@/components/Demo'
 Vue.component(Demo.name, Demo)
+// doc components
+import ComponentDoc from '@/components/ComponentDoc'
+Vue.component(ComponentDoc.name, ComponentDoc)
 
 // directives
 import clickoutside from 'directives/clickoutside'

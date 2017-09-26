@@ -73,7 +73,6 @@ module.exports = {
               permalinkBefore: true,
               permalinkSymbol: '#'
             }],
-            /* or */
             [require('markdown-it-container'), 'demo', {
               validate: function(params) {
                 return params.trim().match(/^demo\s+(.*)$/)
@@ -95,6 +94,24 @@ module.exports = {
                 } else {
                   // closing tag
                   return '</template></demo>\n'
+                }
+              }
+            }],
+            [require('markdown-it-container'), 'doc', {
+              validate: function(params) {
+                return params.trim().match(/^doc\s+(.*)$/)
+              },
+              render: function (tokens, idx) {
+                var m = tokens[idx].info.trim().match(/^doc\s+(.*)$/)
+                if (tokens[idx].nesting === 1) {
+                  var tabs = (m && m.length > 1) ? m[1] : ''
+                  var content = tokens[idx + 1].content
+                  return `<component-doc tabs="${tabs}">
+                    ${tokens[idx + 1].content}
+                    `
+                } else {
+                  // closing tag
+                  return '</component-doc>\n'
                 }
               }
             }]
