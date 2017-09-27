@@ -8,6 +8,3 @@ export default {
   name: 'bs-breadcrumb'
 }
 </script>
-<style lang="scss">
-@import "breadcrumb";
-</style>

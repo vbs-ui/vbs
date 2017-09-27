@@ -56,15 +56,9 @@ export default {
 }
 </script>
 <style lang="scss">
-@import "print";
-@import "reboot";
-@import "utilities";
-@import "grid";
-@import "type";
-@import "close";
-@import "transitions";
-@import "jumbotron";
+@import "bootstrap";
 @import "assets/content";
+@import "assets/spacing";
 @import "assets/atom-one-light.css";
 body {
   margin: 0;

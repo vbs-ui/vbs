@@ -82,11 +82,19 @@ module.exports = {
                 if (tokens[idx].nesting === 1) {
                   // demo description
                   var description = (m && m.length > 1) ? m[1] : ''
+                  // enable set custom class to demo component
+                  var customClass = description.split(' | ')
+                  if (customClass.length > 1) {
+                    description = customClass[1]
+                    customClass = customClass[0]
+                  } else {
+                    customClass = ''
+                  }
                   var content = tokens[idx + 1].content
                   var html = content
                   // var html = convert(striptags.strip(content, ['script', 'style'])).replace(/(<[^>]*)=""(?=.*>)/g, '$1')
                   var descriptionHTML = description ? md.render(description) : ''
-                  return `<demo>
+                  return `<demo clz="${customClass}">
                     ${html}
                     <template slot="desp">${descriptionHTML}</template>
                     <template slot="source">

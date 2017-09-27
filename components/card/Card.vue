@@ -1,12 +1,14 @@
 <template>
   <div class="card">
-    <component v-if="$slots.header" :is="headerTag" class="card-header" :class="[`${headerClass}`]"><slot name="header"></slot></component>
+    <component v-if="$slots.header" :is="headerTag" class="card-header" :class="[headerClass]"><slot name="header"></slot></component>
     <img v-if="images&&images.top" :src="images.top.src" :alt="images.top.alt">
-    <div v-if="$slots.default" class="card-body" :class="[`${bodyClass}`]">
+    <div v-if="images&&$slots.overlay" class="card-img-overlay"><slot name="overlay"></slot></div>
+    <div v-if="$slots.default" class="card-body" :class="[bodyClass]">
       <slot></slot>
     </div>
     <slot name="custom"></slot>
-    <div v-if="$slots.footer" class="card-footer" :class="[`${footerClass}`]"><slot name="footer"></slot></div>
+    <img v-if="images&&images.bottom" :src="images.bottom.src" :alt="images.bottom.alt">
+    <div v-if="$slots.footer" class="card-footer" :class="[footerClass]"><slot name="footer"></slot></div>
   </div>
 </template>
 <script>
@@ -38,6 +40,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-@import "card";
-</style>

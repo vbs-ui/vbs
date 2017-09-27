@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-block" :class="{opened: show}">
+  <div class="demo-block" :class="[{opened: show}, clz]">
     <div class="preview bd-example"><slot></slot></div>
     <div class="description">
       <slot name="desp"></slot>
@@ -19,6 +19,9 @@
 import Clipboard from 'clipboard'
 export default {
   name: 'demo',
+  props: {
+    clz: String
+  },
   data () {
     return {
       show: false,
@@ -43,7 +46,7 @@ export default {
 </script>
 <style lang="scss">
 @import "../assets/_variables";
-// @import "../assets/component-example";
+@import "../assets/component-example";
 .demo-block {
   margin-bottom: 15px;
   border: 1px solid #e9e9e9;
@@ -52,7 +55,9 @@ export default {
     font-size: 14px;
   }
   .preview {
+    margin: 0;
     padding: 30px 15px;
+    border: none;
     border-bottom: 1px solid #e9e9e9;
   }
   .description {
@@ -99,19 +104,6 @@ export default {
     .description {
       border-bottom: 1px solid #e9e9e9;
     }
-  }
-
-  /** example components styles */
-  .progress {
-    & + .progress,
-    & + .btn {
-      margin-top: 1rem;
-    }
-  }
-
-  .nav-tabs,
-  .nav-pills {
-    margin-bottom: 1rem;
   }
 }
 </style>

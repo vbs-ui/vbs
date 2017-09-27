@@ -130,7 +130,7 @@ Documentation and examples for how to use Bootstrap's included navigation compon
 ```
 :::
 
-::: demo Using `v-model` and string value
+::: demo bd-example-tabs | Using `v-model` and string value
 ```html
 <bs-nav tab v-model="activeItem1">
   <bs-nav-item value="home">Active</bs-nav-item>
@@ -146,9 +146,9 @@ Documentation and examples for how to use Bootstrap's included navigation compon
 ```
 :::
 
-::: demo Using `v-model` and no value
+::: demo bd-example-tabs | Using `v-model` and no value
 ```html
-<bs-nav pill v-model="activeItem2">
+<bs-nav pill v-model="activeItem2" class="mb-3">
   <bs-nav-item>Active</bs-nav-item>
   <bs-nav-item>Link</bs-nav-item>
   <bs-nav-item>Link</bs-nav-item>

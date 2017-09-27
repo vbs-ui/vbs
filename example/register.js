@@ -9,6 +9,7 @@ import Button from 'components/buttons/Button'
 import ButtonGroup from 'components/buttons/ButtonGroup'
 import ButtonGroupItem from 'components/buttons/ButtonGroupItem'
 import Card from 'components/card/Card'
+import CardGroup from 'components/card/CardGroup'
 import Carousel from 'components/carousel/Carousel'
 import CarouselItem from 'components/carousel/CarouselItem'
 import Dropdown from 'components/dropdowns/Dropdown'
@@ -32,6 +33,7 @@ Vue.component(Button.name, Button)
 Vue.component(ButtonGroup.name, ButtonGroup)
 Vue.component(ButtonGroupItem.name, ButtonGroupItem)
 Vue.component(Card.name, Card)
+Vue.component(CardGroup.name, CardGroup)
 Vue.component(Carousel.name, Carousel)
 Vue.component(CarouselItem.name, CarouselItem)
 Vue.component(Dropdown.name, Dropdown)

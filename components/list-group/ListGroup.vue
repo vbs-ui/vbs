@@ -9,6 +9,3 @@ export default {
   props: {}
 }
 </script>
-<style lang="scss">
-@import "list-group";
-</style>

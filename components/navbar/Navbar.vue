@@ -24,6 +24,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-@import "_navbar.scss";
-</style>

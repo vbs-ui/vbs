@@ -99,8 +99,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-@import "dropdown";
-@import "buttons";
-@import "button-group";
-</style>
