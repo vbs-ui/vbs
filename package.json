@@ -1,9 +1,23 @@
 {
   "name": "vbs",
-  "version": "0.0.1",
-  "description": "Bootstrap style components using vue",
+  "version": "0.0.2",
+  "description": "Bootstrap style components writing with Vue.",
   "author": "erguotou <erguotou525@gmail.com>",
+  "homepage": "https://vbs-ui.github.io/",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vbs-ui/vbs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vbs-ui/vbs/issues"
+  },
+  "keywords": [
+    "vue",
+    "bootstrap",
+    "components",
+    "ui"
+  ],
   "main": "dist/vbs.min.js",
   "style": "dist/vbs.min.css",
   "scripts": {

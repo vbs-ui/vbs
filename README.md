@@ -1,27 +1,33 @@
 # vbs
+Bootstrap style components writing with Vue.
 
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
+## Install
+```bash
+npm i vbs -S
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Usage
+```bash
+import Vue from 'vue'
+import VBS from 'vbs'
+import 'vbs/dist/vbs.min.css'
+Vue.use(VBS)
+```
+
+## Demo
+[Online demo here](https://vbs-ui.github.io/)
+
+## Develop step
+```bash
+# or npm i
+yarn add
+npm start
+```
+
+## Build step
+```bash
+# This build the doc folder
+npm run build:doc
+# This build the vbs library
+npm run build
+```
