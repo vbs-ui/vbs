@@ -1,9 +1,13 @@
 build/
 config/
+example/
+static/
 test/
 .babelrc
 .editorconfig
 .eslint*
+.npmignore*
 .postcssrc*
 .travis.yml
 index.html
+yarn*
