@@ -2,10 +2,10 @@
 var path = require('path')
 
 module.exports = {
-  build: {
-    env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
+  doc: {
+    env: require('./doc.env'),
+    index: path.resolve(__dirname, '../doc/index.html'),
+    assetsRoot: path.resolve(__dirname, '../doc'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: true,
@@ -20,6 +20,11 @@ module.exports = {
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
+  },
+  build: {
+    entry: [path.resolve(__dirname, '../components/index.js'), path.resolve(__dirname, '../components/css.vue')],
+    output: path.resolve(__dirname, '../dist'),
+    productionSourceMap: false
   },
   dev: {
     env: require('./dev.env'),

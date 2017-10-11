@@ -21,7 +21,7 @@ script:
   - npm run build:doc
 
 after_success:
-  - cd dist
+  - cd doc
   - git init
   - git add -A
   - git commit -m "Auto build"
@@ -31,3 +31,6 @@ cache:
   yarn: true
   directories:
     - node_modules
+
+notifications:
+  webhooks: $WEBHOOK_URL
