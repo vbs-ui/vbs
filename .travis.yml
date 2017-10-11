@@ -27,10 +27,10 @@ after_success:
   - git commit -m "Auto build"
   - git push -u https://$GH_TOKEN@github.com/vbs-ui/vbs-ui.github.io.git HEAD:master --force
 
+notifications:
+  webhooks: $WEBHOOK_URL
+
 cache:
   yarn: true
   directories:
     - node_modules
-
-notifications:
-  webhooks: $WEBHOOK_URL

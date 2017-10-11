@@ -1,4 +1,4 @@
-# vbs
+# vbs ![build status](https://travis-ci.org/vbs-ui/vbs.svg?branch=master)
 Bootstrap style components writing with Vue.
 
 ## Install
