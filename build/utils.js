@@ -51,7 +51,7 @@ exports.cssLoaders = function (options) {
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass', {
-      includePaths: [path.join(__dirname, '../components/theme-default')],
+      includePaths: [path.join(__dirname, '../src/theme-default')],
       data: '@import "_functions.scss";@import "_variables.scss";@import "_mixins.scss";'
     }),
     stylus: generateLoaders('stylus'),

@@ -10,7 +10,7 @@
   </label>
 </template>
 <script>
-import clickoutside from 'directives/clickoutside'
+import clickoutside from '../../directives/clickoutside'
 export default {
   name: 'bs-button-item',
   model: {

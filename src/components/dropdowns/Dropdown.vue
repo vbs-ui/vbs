@@ -1,8 +1,8 @@
 <script>
 import Popper from 'popper.js/dist/esm/popper.js'
-import commonMixins from 'src/mixins/common'
-import clickoutside from 'directives/clickoutside'
-import { AttachmentMap } from 'src/constants'
+import commonMixins from '../../mixins/common'
+import clickoutside from '../../directives/clickoutside'
+import { AttachmentMap } from '../../constants'
 export default {
   name: 'bs-dropdown',
   mixins: [commonMixins],

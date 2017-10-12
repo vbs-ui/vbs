@@ -42,7 +42,7 @@
   </nav>
 </template>
 <script>
-import { rangeArray } from 'src/utils'
+import { rangeArray } from '../../utils'
 export default {
   name: 'bs-pagination',
   props: {

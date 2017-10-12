@@ -1,4 +1,4 @@
-import { isNumber } from 'src/utils'
+import { isNumber } from '../../utils'
 export default {
   props: {
     value: [String, Number]
@@ -25,7 +25,7 @@ export default {
       }
     },
     removeChild (child) {
-      let index = this.children.indexof(child)
+      let index = this.children.indexOf(child)
       this.children.splice(index, 1)
       if (isNumber(child)) {
         // update the rest children' index

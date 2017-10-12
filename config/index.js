@@ -22,7 +22,7 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report
   },
   build: {
-    entry: [path.resolve(__dirname, '../components/index.js'), path.resolve(__dirname, '../components/css.vue')],
+    entry: [path.resolve(__dirname, '../src/index.js'), path.resolve(__dirname, '../src/css.vue')],
     output: path.resolve(__dirname, '../dist'),
     productionSourceMap: false
   },

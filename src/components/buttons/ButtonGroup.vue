@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-group" role="group" :aria-label="ariaLabel">
+  <div class="btn-group" role="group" data-toggle="buttons" :aria-label="ariaLabel">
     <slot></slot>
   </div>
 </template>

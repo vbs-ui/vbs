@@ -7,8 +7,8 @@
   </div>
 </template>
 <script>
-import commonMixins from 'src/mixins/common'
-import { isArray, isObject } from 'src/utils'
+import commonMixins from '../../mixins/common'
+import { isArray, isObject } from '../../utils'
 export default {
   name: 'bs-progress',
   mixins: [commonMixins],

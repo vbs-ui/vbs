@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 // components
-import VBS from 'components'
+import VBS from '../src'
 Vue.use(VBS)
 
 // demo components
@@ -10,7 +10,3 @@ Vue.component(Demo.name, Demo)
 // doc components
 import ComponentDoc from '@/components/ComponentDoc'
 Vue.component(ComponentDoc.name, ComponentDoc)
-
-// directives
-import clickoutside from 'directives/clickoutside'
-Vue.directive('clickoutside', clickoutside)

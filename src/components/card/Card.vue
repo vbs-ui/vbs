@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import { isArray, isObject } from 'src/utils'
+import { isArray, isObject } from '../../utils'
 export default {
   name: 'bs-card',
   props: {
