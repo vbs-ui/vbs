@@ -46,13 +46,7 @@ export default {
     }
   },
   directives: {
-    clickoutside: {
-      bind: (el, binding, vnode) => {
-        if (vnode.context.togglable) { clickoutside.bind(el, binding) }
-      },
-      update: (el, binding, vnode) => { if (vnode.context.togglable) { clickoutside.update(el, binding) } },
-      unbind: (el, binding, vnode) => { if (vnode.context.togglable) { clickoutside.unbind(el) } }
-    }
+    clickoutside
   },
   methods: {
     onClick () {

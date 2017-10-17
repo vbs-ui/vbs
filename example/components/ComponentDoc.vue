@@ -24,7 +24,7 @@ export default {
   computed: {
     computedTabs () {
       if (this.tabs) {
-        return this.tabs.split(/(,| )/)
+        return this.tabs.split(/,| /)
       }
       return []
     }
@@ -32,6 +32,10 @@ export default {
   mounted () {
     this.$nextTick(() => {
       this._tables = this.$el.querySelectorAll('table')
+      this._tables.forEach(_table => {
+        _table.classList.add('table')
+        _table.classList.add('table-bordered')
+      })
       for (let i = 0; i < this.computedTabs.length; i++) {
         this.$refs.pane[i].$el.appendChild(this._tables[i])
       }
@@ -39,3 +43,10 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.component-doc {
+  .nav-tabs {
+    margin-bottom: 12px;
+  }
+}
+</style>

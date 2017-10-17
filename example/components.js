@@ -9,6 +9,7 @@ export default [
   { name: 'Dropdowns', link: 'dropdown' },
   { name: 'Jumbotron', link: 'jumbotron' },
   { name: 'ListGroup', link: 'list-group' },
+  { name: 'Modal', link: 'modal' },
   { name: 'Navs', link: 'nav' },
   { name: 'Navbar', link: 'navbar' },
   { name: 'Pagination', link: 'pagination' },

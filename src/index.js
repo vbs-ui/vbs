@@ -15,6 +15,7 @@ import DropdownItem from './components/dropdowns/DropdownItem'
 import DropdownDivider from './components/dropdowns/divider'
 import ListGroup from './components/list-group/ListGroup'
 import ListGroupItem from './components/list-group/ListGroupItem'
+import Modal from './components/modal/Modal.vue'
 import Nav from './components/navs/Nav'
 import NavItem from './components/navs/NavItem'
 import NavContent from './components/navs/NavContent'
@@ -44,6 +45,7 @@ const components = {
   DropdownDivider,
   ListGroup,
   ListGroupItem,
+  Modal,
   Nav,
   NavItem,
   NavContent,
