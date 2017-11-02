@@ -120,7 +120,6 @@ export default {
       this.$emit('before-hide')
     },
     afterLeave () {
-      // TODO: hide when show animate completed
       this._hideBackdrop()
       document.body.classList.remove(ClassName.OPEN)
       // focus trigger
