@@ -1,27 +1,32 @@
 <template>
-  <li class="nav-item" :class="{dropdown}">
-    <a href class="nav-link" :class="{active: selected,disabled}" @click.prevent="onClick">
-      <slot></slot>
-    </a>
-  </li>
+  <div class="tab-pane" :class="[index===$parent.activedIndex?'show active':'']"
+    role="tabpanel" :aria-labelledby="ariaLabel">
+    <slot></slot>
+  </div>
 </template>
 <script>
-import child from './child'
 export default {
   name: 'bs-nav-item',
-  mixins: [child],
   props: {
     disabled: Boolean,
-    active: Boolean,
-    dropdown: Boolean
+    dropdown: Boolean,
+    label: String,
+    name: [String, Number, Object],
+    ariaLabel: String
+  },
+  data () {
+    return { index: this.name !== undefined ? this.name : -1 }
   },
   methods: {
-    onClick () {
-      if (!this.disabled) {
-        this.$parent.updateActive(this.index)
-        this.$emit('click')
-      }
+    setIndex (index) {
+      this.index = index
     }
+  },
+  created () {
+    this.$parent.addChild(this)
+  },
+  destroyed () {
+    this.$parent.removeChild(this)
   }
 }
 </script>

@@ -1,11 +1,18 @@
 <template>
-  <div class="component-doc">
-    <bs-nav tab v-model="activedIndex">
-      <bs-nav-item v-for="tab in computedTabs" :key="tab">{{tab}}</bs-nav-item>
-    </bs-nav>
-    <bs-nav-content v-model="activedIndex">
-      <bs-nav-pane v-for="tab in computedTabs" :key="tab" ref="pane"></bs-nav-pane>
-    </bs-nav-content>
+  <div class="component-doc row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" role="tablist">
+        <a v-for="(tab,index) in computedTabs" :key="tab" href class="nav-link"  data-toggle="pill" role="tab"
+          :class="[activedIndex===index?'active':'']" @click.prevent="activedIndex=index">{{tab}}</a>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="tab-content">
+        <div v-for="(tab,index) in computedTabs" :key="tab" ref="pane" class="tab-pane fade"
+          :class="[activedIndex===index?'show active':'']" role="tabpanel">
+        </div>
+      </div>
+    </div>
     <slot></slot>
   </div>
 </template>
@@ -37,7 +44,7 @@ export default {
         _table.classList.add('table-bordered')
       })
       for (let i = 0; i < this.computedTabs.length; i++) {
-        this.$refs.pane[i].$el.appendChild(this._tables[i])
+        this.$refs.pane[i].appendChild(this._tables[i])
       }
     })
   }

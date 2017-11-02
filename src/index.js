@@ -18,8 +18,6 @@ import ListGroupItem from './components/list-group/ListGroupItem'
 import Modal from './components/modal/Modal.vue'
 import Nav from './components/navs/Nav'
 import NavItem from './components/navs/NavItem'
-import NavContent from './components/navs/NavContent'
-import NavPane from './components/navs/NavPane'
 import Navbar from './components/navbar/Navbar'
 import NavbarItem from './components/navbar/NavbarItem'
 import Pagination from './components/pagination/Pagination'
@@ -48,8 +46,6 @@ const components = {
   Modal,
   Nav,
   NavItem,
-  NavContent,
-  NavPane,
   Navbar,
   NavbarItem,
   Pagination,
